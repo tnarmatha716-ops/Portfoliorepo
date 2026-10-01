@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowDown, Mail, GraduationCap } from 'lucide-react';
+import { motion } from 'framer-motion';
 import { personalInfo } from '../../data/personal';
 import './Hero.css';
 
@@ -71,20 +72,34 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Right Column: Professionally Framed Profile Avatar */}
+        {/* Right Column: Professionally Framed Portrait Presentation */}
         <div className="hero-image-col">
-          <div className="hero-avatar-frame-wrap animate-float">
-            {/* The Framed Portrait Image */}
-            <div className="hero-image-container">
-              <img
-                src="/images/profile/narmatha.jpg"
-                alt="Narmatha T - Computer Science and Engineering Student"
-                className="hero-avatar-img"
-                loading="eager"
-              />
+          <motion.div
+            className="hero-portrait-frame-wrap"
+            initial={{ opacity: 0, scale: 0.96 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{
+              duration: 0.7,
+              ease: [0.16, 1, 0.3, 1]
+            }}
+            whileHover={{
+              scale: 1.015,
+              transition: { duration: 0.25, ease: [0.16, 1, 0.3, 1] }
+            }}
+          >
+            {/* The Framed Portrait Card */}
+            <div className="hero-portrait-card">
+              <div className="hero-portrait-inner">
+                <img
+                  src="/images/profile/narmatha.jpg"
+                  alt="Narmatha T - Computer Science and Engineering Student"
+                  className="hero-portrait-img"
+                  loading="eager"
+                />
+              </div>
             </div>
 
-            {/* Small Academic Label */}
+            {/* Small Academic Badge */}
             <div className="hero-academic-badge">
               <GraduationCap size={16} className="academic-badge-icon" />
               <div className="academic-badge-text">
@@ -92,7 +107,7 @@ export default function Hero() {
                 <span className="academic-label-sub">Anna University • 2023–2027</span>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

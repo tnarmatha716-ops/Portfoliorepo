@@ -1,6 +1,8 @@
 import React from 'react';
 import { ArrowRight, GraduationCap, Code, Award } from 'lucide-react';
 
+import { motion } from 'framer-motion';
+
 export default function WelcomePage({ onExplore }) {
   return (
     <div className="book-page-welcome">
@@ -9,14 +11,30 @@ export default function WelcomePage({ onExplore }) {
         <div className="page-watermark">PORTFOLIO</div>
 
         <div className="welcome-content">
-          <div className="welcome-avatar-wrapper">
-            <div className="welcome-avatar-ring">
-              <img
-                src="/images/profile/narmatha.jpg"
-                alt="Narmatha T"
-                className="welcome-avatar-img"
-              />
-            </div>
+          <div className="welcome-portrait-wrapper">
+            <motion.div
+              className="welcome-portrait-card"
+              initial={{ opacity: 0, scale: 0.96 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{
+                duration: 0.6,
+                ease: [0.16, 1, 0.3, 1]
+              }}
+              whileHover={{
+                scale: 1.015,
+                transition: { duration: 0.25, ease: [0.16, 1, 0.3, 1] }
+              }}
+            >
+              <div className="welcome-portrait-inner">
+                <img
+                  src="/images/profile/narmatha.jpg"
+                  alt="Narmatha T - Computer Science and Engineering Student"
+                  className="welcome-portrait-img"
+                  loading="eager"
+                />
+              </div>
+            </motion.div>
+
             <div className="welcome-status-pill">
               <span className="welcome-status-dot" />
               <span>Available for Opportunities</span>

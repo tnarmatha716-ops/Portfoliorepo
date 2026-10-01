@@ -385,12 +385,14 @@
   height: 100%;
   border: 1px solid var(--border-color);
   border-radius: 8px;
-  padding: 2.25rem 1.75rem;
+  padding: 1.75rem 1.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   text-align: center;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .page-watermark {
@@ -405,29 +407,51 @@
   letter-spacing: 0.2em;
 }
 
-.welcome-avatar-wrapper {
+/* Refined Professional Portrait Frame (Replaces tiny circular avatar) */
+.welcome-portrait-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.65rem;
+  gap: 0.75rem;
 }
 
-.welcome-avatar-ring {
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
-  padding: 3px;
-  background: linear-gradient(135deg, var(--crimson-primary) 0%, var(--gold) 100%);
-  box-shadow: 0 4px 16px rgba(155, 28, 44, 0.2);
+.welcome-portrait-card {
+  position: relative;
+  width: 190px;
+  height: 240px;
+  border-radius: 28px;
+  padding: 5px;
+  background: var(--bg-elevated);
+  border: 1px solid rgba(155, 28, 44, 0.32);
+  box-shadow: 0 10px 25px -4px rgba(28, 25, 23, 0.08), 0 3px 8px rgba(155, 28, 44, 0.04);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: default;
+  transition: border-color var(--transition-normal), box-shadow var(--transition-normal);
 }
 
-.welcome-avatar-img {
+.welcome-portrait-card:hover {
+  border-color: rgba(155, 28, 44, 0.55);
+  box-shadow: 0 14px 30px -4px rgba(28, 25, 23, 0.12), 0 4px 12px rgba(155, 28, 44, 0.07);
+}
+
+.welcome-portrait-inner {
+  width: 100%;
+  height: 100%;
+  border-radius: 23px;
+  overflow: hidden;
+  background-color: var(--bg-primary);
+}
+
+.welcome-portrait-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 18%;
-  border-radius: 50%;
-  background-color: var(--bg-primary);
+  object-position: center top;
+  display: block;
+  user-select: none;
+  -webkit-user-drag: none;
 }
 
 .welcome-status-pill {
@@ -582,12 +606,51 @@
 @media (max-width: 480px) {
   .book-container {
     width: 92vw;
-    height: 84vh;
+    height: 86vh;
   }
 
   .cover-inner-border,
   .welcome-inner-border {
-    padding: 1.5rem 1rem;
+    padding: 1.25rem 0.85rem;
+  }
+
+  .welcome-portrait-card {
+    width: 150px;
+    height: 190px;
+    border-radius: 24px;
+    padding: 4px;
+  }
+
+  .welcome-portrait-inner {
+    border-radius: 20px;
+  }
+
+  .welcome-portrait-wrapper {
+    gap: 0.55rem;
+  }
+
+  .welcome-heading {
+    font-size: 1.85rem;
+  }
+
+  .welcome-subtext {
+    font-size: 0.84rem;
+    line-height: 1.45;
+  }
+
+  .welcome-quick-pills {
+    margin: 0.65rem 0;
+    gap: 0.4rem;
+  }
+
+  .welcome-pill {
+    padding: 0.28rem 0.65rem;
+    font-size: 0.74rem;
+  }
+
+  .explore-btn {
+    padding: 0.65rem 1rem;
+    font-size: 0.82rem;
   }
 
   .skip-intro-btn {
@@ -595,5 +658,22 @@
     right: 1rem;
     padding: 0.4rem 0.9rem;
     font-size: 0.75rem;
+  }
+}
+
+@media (max-height: 720px) {
+  .welcome-portrait-card {
+    width: 150px;
+    height: 190px;
+    border-radius: 24px;
+    padding: 4px;
+  }
+
+  .welcome-portrait-inner {
+    border-radius: 20px;
+  }
+
+  .welcome-inner-border {
+    padding: 1.25rem 1rem;
   }
 }
