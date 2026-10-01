@@ -1,0 +1,233 @@
+/* ==========================================================================
+   Achievements Component Styling
+   Space-Efficient Athletic Honors & Leadership in Warm Ivory & Crimson Identity
+   ========================================================================== */
+
+.achievements-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2.25rem;
+}
+
+.achievement-card {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-md);
+  transition: transform var(--transition-normal), border-color var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.achievement-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--gold);
+  box-shadow: 0 12px 28px -8px rgba(180, 83, 9, 0.14);
+}
+
+.achievement-image-box {
+  position: relative;
+  width: 100%;
+  height: 190px;
+  overflow: hidden;
+  background: #EBE3D8;
+}
+
+.achievement-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.achievement-card:hover .achievement-img {
+  transform: scale(1.03);
+}
+
+.achievement-image-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 65%, rgba(255, 253, 249, 0.5) 100%);
+}
+
+.achievement-tag-pill {
+  position: absolute;
+  top: 0.85rem;
+  left: 0.85rem;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.2rem 0.65rem;
+  border-radius: 9999px;
+  background: rgba(255, 253, 249, 0.92);
+  backdrop-filter: blur(8px);
+  color: var(--gold);
+  border: 1px solid rgba(180, 83, 9, 0.3);
+}
+
+.achievement-content {
+  padding: 1.25rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.achievement-meta-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.35rem;
+}
+
+.achievement-category {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.trophy-gold-icon {
+  color: var(--gold);
+}
+
+.achievement-title {
+  font-family: var(--font-aldhabi);
+  font-size: 1.7rem;
+  font-weight: normal;
+  color: var(--text-primary);
+  line-height: 1;
+  margin-bottom: 0.15rem;
+}
+
+.achievement-award-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--crimson-primary);
+  margin-bottom: 0.65rem;
+}
+
+.achievement-description {
+  font-size: 0.84rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+  margin-bottom: 0.95rem;
+  flex-grow: 1;
+}
+
+.achievement-attributes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.attribute-badge {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  padding: 0.18rem 0.5rem;
+  border-radius: var(--radius-sm);
+  background: var(--bg-primary);
+  color: var(--text-muted);
+  border: 1px solid var(--border-color);
+}
+
+/* Leadership Block */
+.leadership-section-block {
+  padding: clamp(1.5rem, 3vw, 2.25rem);
+  border-radius: var(--radius-xl);
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-md);
+}
+
+.leadership-header {
+  margin-bottom: 1.25rem;
+}
+
+.leadership-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  color: var(--crimson-primary);
+  margin-bottom: 0.35rem;
+}
+
+.leadership-title {
+  font-family: var(--font-aldhabi);
+  font-size: 1.7rem;
+  font-weight: normal;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+  line-height: 1;
+}
+
+.leadership-desc {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+}
+
+.leadership-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.15rem;
+}
+
+.leadership-card {
+  padding: 1.15rem 1.25rem;
+  border-radius: var(--radius-md);
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+}
+
+.lead-icon-box {
+  width: 38px;
+  height: 38px;
+  min-width: 38px;
+  border-radius: 9px;
+  background: var(--crimson-tint);
+  border: 1px solid rgba(155, 28, 44, 0.2);
+  color: var(--crimson-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lead-domain {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  margin-bottom: 0.2rem;
+}
+
+.lead-role {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.3rem;
+}
+
+.lead-text {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+@media (max-width: 1024px) {
+  .achievements-cards-grid,
+  .leadership-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+}

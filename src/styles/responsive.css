@@ -1,0 +1,41 @@
+/* Responsive Breakpoints & Device Adjustments */
+
+@media (max-width: 1024px) {
+  :root {
+    --header-height: 66px;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --header-height: 60px;
+    --border-radius-lg: 14px;
+  }
+
+  .section-wrapper {
+    padding-top: clamp(2.25rem, 4.5vw, 3.25rem);
+    padding-bottom: clamp(2.25rem, 4.5vw, 3.25rem);
+  }
+
+  .btn {
+    padding: 0.65rem 1.25rem;
+    font-size: 0.88rem;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --spacing-container: 1.1rem;
+  }
+
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Ensure no accidental overflow anywhere */
+img, svg, video, canvas, audio, iframe, embed, object {
+  display: block;
+  max-width: 100%;
+}

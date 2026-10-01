@@ -1,0 +1,77 @@
+/* ==========================================================================
+   Reference Palette & Design Tokens
+   Warm Ivory, Editorial Dark Ink & Crimson Identity
+   ========================================================================== */
+
+@font-face {
+  font-family: 'Aldhabi';
+  src: url('/fonts/Aldhabi.woff2') format('woff2'),
+       url('/fonts/Aldhabi.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* Exact Reference Color Palette */
+  --bg-primary: #F4EEE6;          /* Sophisticated warm ivory page background */
+  --bg-elevated: #FFFDF9;         /* Elevated cards and content surfaces */
+  --bg-card: #FFFDF9;
+  --bg-glass: rgba(255, 253, 249, 0.92);
+  --bg-subtle: rgba(244, 238, 230, 0.75);
+
+  --text-primary: #1C1917;        /* Primary text - Dark ink */
+  --text-secondary: #5C534C;      /* Secondary text - Muted brown-gray */
+  --text-muted: #786C63;
+  --text-light: #FFFDF9;
+
+  --border-color: #E4D8CC;        /* Borders */
+  --border-subtle: #EBE1D6;
+  --border-focus: #9B1C2C;
+
+  --crimson-primary: #9B1C2C;     /* Main crimson interaction color */
+  --crimson-dark: #6F101C;        /* Darker crimson state */
+  --crimson-bright: #B42335;      /* Brighter crimson hover/glow accent */
+  --crimson-soft: #F3D6D8;        /* Soft crimson pill/badge background */
+  --crimson-tint: rgba(155, 28, 44, 0.07);
+  --crimson-hover: #831624;
+
+  --gold: #B45309;                /* Subtle gold accent */
+  --gold-soft: rgba(180, 83, 9, 0.12);
+
+  /* Typography Hierarchy */
+  --font-aldhabi: 'Aldhabi', 'Cormorant Garamond', 'Playfair Display', serif;
+  --font-editorial: 'Aldhabi', serif;
+  --font-body: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Responsive Clamp Sizing */
+  --title-hero: clamp(2.75rem, 6.5vw, 5.5rem);
+  --title-section: clamp(2rem, 4vw, 3.2rem);
+  --title-card: clamp(1.3rem, 2.2vw, 1.9rem);
+  --text-body: clamp(0.92rem, 1vw, 1.05rem);
+  --text-small: clamp(0.8rem, 0.88vw, 0.88rem);
+
+  /* Layout Spacing (Space-efficient, editorial composition) */
+  --header-height: 70px;
+  --max-width: 1360px;
+  --spacing-section: clamp(3rem, 5.5vw, 4.75rem);
+  --spacing-container: clamp(1.25rem, 3.5vw, 3rem);
+
+  /* Border Radii */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 22px;
+
+  /* Shadows - Realistic physical depth */
+  --shadow-sm: 0 2px 6px rgba(28, 25, 23, 0.04);
+  --shadow-md: 0 6px 18px -3px rgba(28, 25, 23, 0.06), 0 2px 5px -1px rgba(28, 25, 23, 0.03);
+  --shadow-lg: 0 16px 32px -8px rgba(28, 25, 23, 0.1), 0 0 0 1px #E4D8CC;
+  --shadow-book: 0 25px 60px -12px rgba(28, 25, 23, 0.3), 0 8px 20px rgba(111, 16, 28, 0.12);
+
+  /* Transitions */
+  --transition-fast: 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-normal: 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-smooth: 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}

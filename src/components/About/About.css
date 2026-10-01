@@ -1,0 +1,138 @@
+/* ==========================================================================
+   About Component Styling
+   Space-Efficient Editorial Narrative & Building, Learning, Growth Cards
+   ========================================================================== */
+
+.about-editorial-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 1.75rem;
+  align-items: stretch;
+}
+
+.about-narrative-card {
+  padding: clamp(1.5rem, 2.5vw, 2.25rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.about-narrative-heading {
+  font-family: var(--font-aldhabi);
+  font-size: var(--title-card);
+  font-weight: normal;
+  color: var(--text-primary);
+  line-height: 1.18;
+  margin-bottom: 0.85rem;
+}
+
+.about-narrative-text {
+  font-size: var(--text-body);
+  color: var(--text-secondary);
+  line-height: 1.68;
+  margin-bottom: 0.85rem;
+}
+
+.highlight-ink {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.about-academic-callout {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.9rem 1.15rem;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  margin-top: 1.15rem;
+}
+
+.callout-icon {
+  color: var(--crimson-primary);
+  min-width: 18px;
+}
+
+.callout-title {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.1rem;
+}
+
+.callout-desc {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+/* Right Column: Three Pillars */
+.about-pillars-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.pillar-editorial-card {
+  padding: 1.25rem 1.4rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  transition: transform var(--transition-normal), border-color var(--transition-normal);
+}
+
+.pillar-editorial-card:hover {
+  transform: translateX(4px);
+  border-color: var(--crimson-primary);
+}
+
+.pillar-card-icon-box {
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  border-radius: 10px;
+  background: var(--crimson-tint);
+  border: 1px solid rgba(155, 28, 44, 0.2);
+  color: var(--crimson-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pillar-card-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.pillar-tag {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  color: var(--crimson-primary);
+  margin-bottom: 0.15rem;
+}
+
+.pillar-title {
+  font-family: var(--font-aldhabi);
+  font-size: 1.5rem;
+  font-weight: normal;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+  line-height: 1;
+}
+
+.pillar-desc {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+}
+
+@media (max-width: 1024px) {
+  .about-editorial-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}

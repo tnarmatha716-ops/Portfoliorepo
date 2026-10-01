@@ -1,0 +1,157 @@
+/* ==========================================================================
+   Contact Component Styling
+   Minimal, Space-Efficient, Professional Layout with 2 Compact Options
+   ========================================================================== */
+
+.contact-container {
+  display: flex;
+  justify-content: center;
+}
+
+.contact-box {
+  width: 100%;
+  max-width: 700px;
+  padding: clamp(1.75rem, 3.5vw, 2.5rem);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-lg);
+  border-radius: var(--radius-xl);
+}
+
+.contact-heading {
+  font-family: var(--font-aldhabi);
+  font-size: var(--title-section);
+  font-weight: normal;
+  color: var(--text-primary);
+  line-height: 1.05;
+  margin-top: 0.35rem;
+  margin-bottom: 0.5rem;
+}
+
+.contact-invitation {
+  font-size: var(--text-body);
+  color: var(--text-secondary);
+  line-height: 1.6;
+  max-width: 500px;
+  margin-bottom: 1.5rem;
+}
+
+/* Two Compact Contact Options */
+.compact-contact-options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.compact-contact-item {
+  display: flex;
+  align-items: center;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 0.45rem 0.75rem;
+  transition: all var(--transition-normal);
+  position: relative;
+}
+
+.compact-contact-item:hover {
+  border-color: var(--crimson-primary);
+  box-shadow: 0 6px 18px rgba(155, 28, 44, 0.1);
+  transform: translateY(-2px);
+}
+
+.compact-link-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  color: inherit;
+  padding: 0.25rem 0.5rem;
+}
+
+.compact-icon-wrap {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: var(--crimson-tint);
+  border: 1px solid rgba(155, 28, 44, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--crimson-primary);
+  transition: all var(--transition-fast);
+}
+
+.compact-contact-item:hover .compact-icon-wrap {
+  background: var(--crimson-primary);
+  color: #FFFDF9;
+}
+
+.compact-text-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.compact-label {
+  font-family: var(--font-mono);
+  font-size: 0.64rem;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+}
+
+.compact-val {
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.compact-copy-btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 6px;
+  background: transparent;
+  border: 1px solid transparent;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-left: 0.4rem;
+  transition: all var(--transition-fast);
+}
+
+.compact-copy-btn:hover {
+  background: var(--crimson-tint);
+  color: var(--crimson-primary);
+  border-color: rgba(155, 28, 44, 0.2);
+}
+
+.compact-ext-icon {
+  color: var(--text-muted);
+  margin-left: 0.35rem;
+}
+
+.text-crimson {
+  color: var(--crimson-primary);
+}
+
+@media (max-width: 640px) {
+  .compact-contact-options {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .compact-contact-item {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
